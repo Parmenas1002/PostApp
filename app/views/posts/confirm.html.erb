@@ -1,0 +1,16 @@
+<%= render 'nav' %>
+
+<h3>Confirm informations</h3>
+
+<%= form_with(model: @post, local: true) do |form| %>
+
+    <%= form.hidden_field :content %>
+
+    <p>Post content <%= @post.content %></p>
+
+    <%= form.submit "Save" %>
+    <%= form.submit "Return to edit", name: 'back' %>
+
+<% end %>
+
+<%= render 'footer' %>
