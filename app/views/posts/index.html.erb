@@ -6,10 +6,12 @@
     <div class="box">
       <h3>Post N° <%= post.id %></h3>
       <p><%= post.content %></p>
-      <ul>
-        <li>Add<%= link_to 'Edit post', posts_path %></li>
-        <li>ADD<%= link_to 'Delete post', posts_path, method: :delete, data: { confirm: 'Are you sure to delete?'}  %></li>
-      </ul>
+      <div class="container-link">
+        <p><%= link_to 'Edit post', edit_post_path(post.id) %></p>
+        <p><%= link_to 'Delete post', post_path(post.id), method: :delete, data: { confirm: 'Are you sure to delete?'}  %></p>
+      </div>
+
+
     </div>
   <% end %>
 </div>

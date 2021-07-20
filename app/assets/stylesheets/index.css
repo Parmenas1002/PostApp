@@ -84,6 +84,20 @@ p{
     }
 }
 
+.container-link{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-link a{
+  color: #1DA1F2;
+  text-decoration: none;
+}
+
+.container-link a:hover{
+  text-decoration: underline;
+}
+
 .footer{
     background-color: black;
     height: 60px;
