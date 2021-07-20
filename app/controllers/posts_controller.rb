@@ -37,6 +37,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post.destroy
+    redirect_to posts_path, notice: "Post destroy with sucess"
+  end
+
   private
   def post_params
     params.require(:post).permit(:content)
