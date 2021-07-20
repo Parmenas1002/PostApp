@@ -1,0 +1,19 @@
+<%= form_with(model: @post, local:true) do |form| %>
+  <% if @post.errors.any? %>
+    <div class="error">
+      <h2> <%= @post.errors.count %> errors in this form </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li> <%= msg %> </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class ="post_content">
+      <%= form.label :content %>
+      <%= form.text_field :content %>
+  </div>
+  <br><br>
+  <%= form.submit %>
+<% end %>

@@ -1,38 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Sample</title>
-    <link rel="stylesheet" href="../../assets/stylesheets/index.css">
-    <link rel="stylesheet" href="../../assets/stylesheets/normalize.css">
-  </head>
 
-  <body>
+<%= render 'nav' %>
 
-    <header class="header clearfix">
-        <ul class="left_menu">
-            <li><%= link_to 'PostApp', posts_path %></li>
-        </ul>
-        <ul class="right_menu">
-          <li><%= link_to 'Home', posts_path %></li>
-          <li><%= link_to 'Create new post', posts_path %></li>
-        </ul>
-    </header>
-    
-    <div class="container">
-      <% @posts.each do |post| %>
-        <div class="box">
-          <h3>Post N° <%= post.id %></h3>
-          <p><%= post.content %></p>
-          <ul>
-            <li>Add<%= link_to 'Edit post', posts_path %></li>
-            <li>ADD<%= link_to 'Delete post', posts_path, method: :delete, data: { confirm: 'Are you sure to delete?'}  %></li>
-          </ul>
-        </div>
-      <% end %>
+<div class="container">
+  <% @posts.each do |post| %>
+    <div class="box">
+      <h3>Post N° <%= post.id %></h3>
+      <p><%= post.content %></p>
+      <ul>
+        <li>Add<%= link_to 'Edit post', posts_path %></li>
+        <li>ADD<%= link_to 'Delete post', posts_path, method: :delete, data: { confirm: 'Are you sure to delete?'}  %></li>
+      </ul>
     </div>
+  <% end %>
+</div>
 
-    <footer class="footer">
-            <p>Copyright © 2018 DIVE INC All RIGHTS RESERVED.</p>
-        </footer>
-  </body>
-</html>
+<%= render 'footer' %>

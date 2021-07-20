@@ -1,0 +1,21 @@
+.form{
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.title{
+  text-align: center;
+}
+
+input[type = 'submit']{
+  padding: 8px;
+  background-color: #1DA1F2;
+  border: 2px solid white;
+  border-radius: 7px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+
+}
